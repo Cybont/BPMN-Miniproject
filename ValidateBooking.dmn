@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="asfasfsdfsdf" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.3.0">
+  <decision id="Number_Of_Rooms" name="Number of rooms">
+    <decisionTable id="DecisionTable_1oh6471">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>Booking</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1p2ycia">
+        <inputExpression id="LiteralExpression_11eyw6p" typeRef="integer">
+          <text>Number of rooms</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="Check" typeRef="boolean" biodi:width="192" />
+      <rule id="DecisionRule_1bgfw7n">
+        <inputEntry id="UnaryTests_0t06lef">
+          <text>"rooms"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1498yr4">
+          <text>&lt;=5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mn2kv6">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0m8cqtt">
+        <inputEntry id="UnaryTests_0m8npgm">
+          <text>"rooms"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i44da7">
+          <text>&gt;5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1deehom">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Number_Of_Rooms">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
